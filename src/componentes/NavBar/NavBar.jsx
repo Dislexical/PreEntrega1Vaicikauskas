@@ -1,20 +1,20 @@
-import React from "react"
-import CartWidget from "../CartWidget/CartWidget"
+import React from "react";
+import { Link } from "react-router-dom";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
-    return(
+    return (
         <header>
-        <h1 style={{ display:'flex', justifyContent:'space-between',}}> Dislex.shop </h1>
-         <nav>
-            <button to="/categoty/opcion 1">Opcion 1</button>
-            <button to="/categoty/opcion 2">Opcion 2</button>
-            <button to="/categoty/opcion 3">Opcion 3</button>
-        </nav>
-            <CartWidget/>
-         
-         
+            <h1 style={{ display: 'flex', justifyContent: 'space-between' }}> Dislex.shop </h1>
+            <nav>
+                <Link to="/">Inicio</Link> {'/'}
+                <Link to="/category/consolas">Opcion 1</Link>
+                <Link to="/category/celular">Opcion 2</Link>
+                <Link to="/category/opcion3">Opcion 3</Link>
+            </nav>
+            <CartWidget />
         </header>
-    )
+    );
 }
 
-export default NavBar
+export default NavBar;
